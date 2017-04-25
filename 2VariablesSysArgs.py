@@ -1,9 +1,9 @@
 #!/usr/bin/env python
-# Years till 100
+# Script con entradas
+
 import sys
 
-name = sys.argv[1]
-age = int(sys.argv[2])
-diff = 100 - age
+nombre = sys.argv[1]
+edad = int(sys.argv[2])
 
-print 'Hello', name + ', you will be 100 in', diff, 'years!'
+print ('Hola,', nombre + '. Serás 100 en', (100 - edad), 'años!')

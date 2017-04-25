@@ -1,24 +1,28 @@
 #!/usr/bin/env python
-# Years till 100
+# Edad hasta 100
 import sys
 
+nombre = ''
+
 if len(sys.argv) > 1:
-    name = sys.argv[1]
+    nombre = sys.argv[1]
 else:
-    name = raw_input('Enter Name:')
+    nombre = input('Escribe nombre: ')
+
+edad = 0
 
 if len(sys.argv) > 2:
-    age = int(sys.argv[2])
+    edad = int(sys.argv[2])
 else:
-    age = int(raw_input('Enter Age:'))
+    edad = int(input('Escribe edad: '))
 
-sayHello = 'Hello ' + name + ','
+frase_inicio = 'Hola ' + nombre + ', '
 
-if age == 100:
-    sayAge = 'You are already 100 years old!'
-elif age < 100:
-    sayAge = 'You will be 100 in ' + str(100 - age) + ' years!'
+if edad == 100:
+    frase_inicio = 'Tienes exactamente 100 años!'
+elif edad < 100:
+    frase_inicio = 'Tendrás 100 años en ' + str(100 - edad) + ' años!'
 else:
-    sayAge = 'You turned 100 ' + str(age - 100) + ' years ago!'
+    frase_inicio = 'Cumpliste los 100 hace ' + str(edad - 100) + ' años!'
 
-print sayHello, sayAge
+print (nombre, frase_inicio)

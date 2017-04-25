@@ -1,15 +1,14 @@
 #!/usr/bin/env python
-# This is some secure program that uses security.
 import sys
 
-validPassword = 'secret' #this is our password.
+pswd = 'secreto' # Mi password
 
-inputPassword = raw_input('Please Enter Password: ')
+entrada_usuario = input('Introduce contraseña: ')
 
-if inputPassword == validPassword:
-    print 'You have access!'
+if entrada_usuario == pswd:
+    print ('Acceso autorizado!')
 else:
-    print 'Access denied!'
+    print ('Acceso denegado!')
     sys.exit(0)
 
-print 'Welcome!'
+print ('Bienvenido/a')

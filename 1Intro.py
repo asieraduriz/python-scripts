@@ -1,4 +1,4 @@
 #!/usr/bin/env python
-# This is my first script.
+# Mi primer script
 
-print "Hello Python"
+print ("Hello Python")

@@ -4,18 +4,18 @@ import sys
 import optparse
 
 parser = optparse.OptionParser()
-parser.add_option('-n', '--name', dest='name', help='Your Name')
-parser.add_option('-a', '--age', dest='age', help='Your Age', type=int)
+parser.add_option('-n', '--nombre', dest='nombre', help='Tu nombre')
+parser.add_option('-e', '--edad', dest='edad', help='Tu edad', type=int)
 
 (options, args) = parser.parse_args()
 
-if options.name is None:
-    options.name = raw_input('Enter Name:')
+if options.nombre is None:
+    options.nombre = nput('Enter Name:')
 
-if options.age is None:
-    options.age = int(raw_input('Enter Age:'))
+if options.edad is None:
+    options.edad = int(raw_input('Enter Age:'))
 
-sayHello = 'Hello ' + options.name + ','
+frase_inicio = 'Hola ' + options.nombre + ','
 
 if options.age == 100:
     sayAge = 'You are already 100 years old!'

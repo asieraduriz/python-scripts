@@ -1,7 +1,7 @@
 #!/usr/bin/env python
-# This is my second script.
+# Mi segundo script
 
-hello = 'Hello'
+hola = 'Hello'
 python = 'Python!'
 
-print hello, python
+print (hola, python)
