@@ -1,30 +1,34 @@
 #!/usr/bin/env python
 
 from enum import Enum
-class Gender(Enum):
-	MALE = 0
-	FEMALE = 1
-	UNSPECIFIED = 2
+class Genero(Enum):
+	MASCULINO = 0
+	FEMENINO = 1
+	NO_ESPECIFICADO = 2
 
-class User:
-	name = ""
-	age = 0
-	gender = Gender.UNSPECIFIED
+class Usuario:
+	
+	def __init__(self):
+		self.nombre = ''
+		self.edad = 0
+		self.genero = Genero.NO_ESPECIFICADO
 
-	def display(self):
-		if (self.gender == Gender.MALE):
-			print self.name, 'is a male'
-		elif (self.gender == Gender.FEMALE):
-			print self.name, 'is a female'
+	def mostrar(self):
+		if self.genero == Genero.MASCULINO:
+			print (self.nombre, 'Es un hombre')
+		elif (self.genero == Genero.FEMENINO):
+			print (self.nombre, 'Es una mujer')
 		else:
-			print self.name, 'did not specify a gender'
+			print (self.nombre, 'Sin especificar')
 
-user1 = User()
-user1.name = 'Mike'
-user1.gender = Gender.MALE
 
-user2 = User()
-user2.name = 'Sally'
-user2.gender = Gender.FEMALE
+user1 = Usuario()
+user1.nombre = 'Mike'
+user1.genero = Genero.MASCULINO
 
-user1.display()
+user2 = Usuario()
+user2.nombre = 'Sally'
+user2.genero = Genero.FEMENINO
+
+user1.mostrar()
+user2.mostrar()

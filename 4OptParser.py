@@ -10,18 +10,18 @@ parser.add_option('-e', '--edad', dest='edad', help='Tu edad', type=int)
 (options, args) = parser.parse_args()
 
 if options.nombre is None:
-    options.nombre = nput('Enter Name:')
+    options.nombre = input('Escribe nombre: ')
 
 if options.edad is None:
-    options.edad = int(raw_input('Enter Age:'))
+    options.edad = int(input('Escribe edad: '))
 
 frase_inicio = 'Hola ' + options.nombre + ','
 
-if options.age == 100:
-    sayAge = 'You are already 100 years old!'
-elif options.age < 100:
-    sayAge = 'You will be 100 in ' + str(100 - options.age) + ' years!'
+if options.edad == 100:
+    frase_inicio = 'Tines 100 años!'
+elif options.edad < 100:
+    frase_edad = 'Serás 100 en ' + str(100 - options.edad) + ' años!'
 else:
-    sayAge = 'You turned 100 ' + str(options.age - 100) + ' years ago!'
+    frase_edad = 'Cumpliste 100 años hace ' + str(options.age - 100) + ' años!'
 
-print sayHello, sayAge
+print (options.nombre, frase_edad)

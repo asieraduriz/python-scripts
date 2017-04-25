@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 import time
 
-counter = 0
+contador = 0
 
 while 1:
     time.sleep(1)
-    counter += 1
+    contador += 1
 
-    print 'Script has been looping for', counter, 'seconds...'
+    print ('ZZZ ', contador, 'segundos dormido')

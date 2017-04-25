@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import subprocess
 
-proc = subprocess.Popen(['tail', '-500', 'mylogfile.log'], stdout=subprocess.PIPE)
+proc = subprocess.Popen(['tail', '-500', 'usuarios.info'], stdout=subprocess.PIPE)
 
-for line in proc.stdout.readlines():
-    print line.rstrip()
+for linea in proc.stdout.readlines():
+    print (linea.rstrip())

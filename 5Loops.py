@@ -1,14 +1,14 @@
 #!/usr/bin/env python
-#guess the number game
+
 import random
 
-answer = random.randint(1, 10)
+respuesta = random.randint(1, 10)
 num = 0
 
-while num != answer:
-    num = int(raw_input('What number am I thinking of? '))
+while num != respuesta:
+    num = int(input('¿Podrías acertar el número? '))
 
-    if num != answer:
-        print 'Wrong!'
+    if num != respuesta:
+        print ('Eeeeeeeeeeegggggggg, error')
 
-print 'Correct!'
+print ('Woohoo, acertaste')

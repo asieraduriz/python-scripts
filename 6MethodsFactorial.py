@@ -7,5 +7,5 @@ def fac(n):
     else:
         return 1
 
-num = int(raw_input('Enter a number: '))
-print str(num) + '! =', fac(num)
+num = int(input('Escribe un numero: '))
+print (str(num) + '! =', fac(num))

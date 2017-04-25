@@ -1,14 +1,14 @@
 #!/usr/bin/env python
 
-userInput = raw_input('Enter a list of numbers between 1 and 100, separated by spaces: ')
-nums = userInput.split()
+ristraNumeros = input('Escribe numeros separados con 1 espacio separado: ')
+listaNums = ristraNumeros.split()
 
-for strNum in nums:
-    if not strNum.isdigit():
-        print 'Not a Number:', strNum
-    elif int(strNum) < 1:
-        print 'Number is less than 1:', strNum
-    elif int(strNum) > 100:
-        print 'Number is greater than 100:', strNum
+for numero in listaNums:
+    if not numero.isdigit():
+        priNegativo o no letra:', numero)
+    elif int(numero) < 1:
+        print ('Digito menor a 1:', numero)
+    elif int(numero) > 100:
+        print ('Numero superior a 100:', numero)
     else:
-        print 'Number is valid:', strNum
+        print ('Number is valid:', numero)

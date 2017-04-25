@@ -1,50 +1,51 @@
 #!/usr/bin/env python
 import sys
 
-class User:
-    name = ""
-    age = 0
-    height = 0
-    weight = 0
+class Usuario:
+	def __init__(self):
+		self.nombre = ''
+		self.edad = 0
+		self.altura = 0.0
+		self.peso = 0.0
     
-    def display(self):
-        print ''
-        print 'User Information:'
-        print 'User Name  :', self.name
-        print 'User Age   :', self.age
-        print 'User Height:', self.height
-        print 'User Weight:', self.weight
+	def mostrar(self):
+		print ()
+		print ('Informacion de usuario :')
+		print ('Nombre usuario : ', self.nombre)
+		print ('Edad   usuario : ', self.edad)
+		print ('Altura usuario : ', self.altura)
+		print ('Peso   usuario : ', self.peso)
     
-    def loadFromInput(self):
-        self.name = raw_input('Enter User Name: ')
-        self.age = int(raw_input('Enter Age: '))
-        self.height = float(raw_input('Enter Height (in feet): '))
-        self.weight = int(raw_input('Enter Weight: '))
+	def cargarUsuario(self):
+		self.nombre = input('Escribe usuario: ')
+		self.edad = int(input('Escribe edad: '))
+		self.altura = float(input('Escribe altura en metros: '))
+		self.peso = float(input('Escribe peso en kilogramos: '))
     
-    def save(self):
-        f = open('user.info','w')
-        f.write(self.name + '\n')
-        f.write(str(self.age) + '\n')
-        f.write(str(self.height) + '\n')
-        f.write(str(self.weight) + '\n')
-        f.close()
-        
-    def loadFromFile(self):
-    	f = open('user.info', 'r')
-    	self.name = f.readline().rstrip()
-    	self.age = int(f.readline())
-    	self.height = float(f.readline())
-    	self.weight = int(f.readline())
+	def almacenar(self):
+		f = open('usuarios.info','w')
+		f.write(self.nombre + '\n')
+		f.write(str(self.edad) + '\n')
+		f.write(str(self.altura) + '\n')
+		f.write(str(self.peso) + '\n')
+		f.close()
 
-        
+	def cargarFichero(self):
+		f = open('usuarios.info', 'r')
+		self.nombre = f.readline().rstrip()
+		self.edad = int(f.readline())
+		self.altura = float(f.readline())
+		self.peso = float(f.readline())
+
+
 theUser = None
 
-if len(sys.argv) > 1 and sys.argv[1] == 'READ':
-    theUser = User()
-    theUser.loadFromFile()
+if len(sys.argv) > 1 and sys.argv[1] == 'LECTURA':
+    theUser = Usuario()
+    theUser.cargarFichero()
 else:
-    theUser = User()
-    theUser.loadFromInput()
-    theUser.save()
+    theUser = Usuario()
+    theUser.cargarUsuario()
+    theUser.almacenar()
     
-theUser.display()
+theUser.mostrar()

@@ -8,11 +8,11 @@ def logit(level, msg):
         print 'MSG' + str(level) + ':', msg
 
 def getUser():
-    logit(2, 'Entering Function getUser()...')
-    user = raw_input('Enter User Name: ')
-    logit(1, 'Leaving Function getUser()...')
+    logit(2, 'Entrando metodo getUser()...')
+    user = input('Escribe usuario: ')
+    logit(1, 'Terminando metodo getUser()...')
     return user
 
-logit(3, 'Starting Script...')
-logit(3, 'User Entered: ' + getUser())
-logit(3, 'Ending Script.')
+logit(3, 'Comenzando script...')
+logit(3, 'Usuario creado: ' + getUser())
+logit(3, 'Finalizando script.')

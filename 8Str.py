@@ -1,24 +1,24 @@
 #!/usr/bin/env python
 
-strUsers = 'rpulley  ,    jsmith, svai,  jsatriani    ,ymalmsteen    '
-arrUsers = strUsers.split(',')
+strUsuarios = 'rpulley  ,    jsmith, svai,  jsatriani    ,ymalmsteen    '
+listaUsuarios = strUsuarios.split(',')
 
-for user in arrUsers:
+for usuario in listaUsuarios:
     trimUser = user.strip()
     trimUserR = user.rstrip()
     trimUserL = user.lstrip()
 
-    firstInitial = trimUser[:1]
-    lastInitial = trimUser[1:2]
-    lastName = trimUser[1:]
+    primeraInicial = trimUser[:1]
+    ultimaInicial = trimUser[1:2]
+    apellido = trimUser[1:]
 
-    print 'User : \'' + user + '\''
-    print 'LTrim: \'' + trimUserL + '\''
-    print 'RTrim: \'' + trimUserR + '\''
-    print ' Trim: \'' + trimUser + '\''
+    print ('Usuario : \'' + usuario + '\'')
+    print ('LTrim: \'' + trimUserL + '\'')
+    print ('RTrim: \'' + trimUserR + '\'')
+    print (' Trim: \'' + trimUser + '\'')
 
-    print 'First Initial:', firstInitial.upper()
-    print 'Last Initial: ', lastInitial.upper()
-    print 'Last Name:', lastName
+    print ('Primera Inicial:', primeraInicial.upper())
+    print ('Ultima Inicial: ', ultimaInicial.upper())
+    print ('Apellido:', apellido)
 
-    print ''
+    print ()
